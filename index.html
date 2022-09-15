@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Form</title>
+    <style>
+        body{
+            background-image: url("Frame-47.avif");
+            background-size: cover;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        div.overlay{
+            width: 100%;
+            height: 800px;
+            background-color:rgba(0,
+             0, 0, 0.3);
+        }
+        form.myform{
+            width: 30%;
+            height: 500px;
+            background-color: rgba(0,
+                         0, 0, 0.6);
+            position: absolute;
+            top: 100px;
+            left: 30%;
+            padding: 50px;
+           
+        
+        }
+        form.myform > h1{
+            text-align: center;
+        }
+        form.myform > div{
+            margin-bottom: 20px;
+        }
+        input[type="submit"]{   /* '[]' -> this is a attribute type selector in css*/
+          width: 100%;
+          height: 50px;
+          font-size: 1.6em;
+          color: black;
+          background-color: yellow;
+          border: none;
+        }
+        input[type="text"] , input[type="password"]{  /* ','-> combinational selector in css*/
+            background-color: transparent;
+            color: azure;
+            width: 100%;
+            height: 40px;
+            border: none;
+
+        }
+        .myform button{
+           /*''space'  decendant selector in css */
+             background: transparent;
+              color: white;
+              border: none;
+              font-size: 1.2em;
+        }
+        .myform label{
+            font-size: 1.2em; /* 1em = 16px*/
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <form class="myform">
+        <h1>Login Here</h1>
+        <div>
+            <label> Email</label><br>
+            <input type="text" name="email" />
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input type="password" name="password" />
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Sign In" />
+        </div>
+        <div>
+           <button>Forget Password</button>
+        </div>
+    </form>
+</body>
+</html>
